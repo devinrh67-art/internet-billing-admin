@@ -1,0 +1,95 @@
+{
+  "entities": {
+    "AppUser": {
+      "title": "AppUser",
+      "description": "operator or administrator accounts",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "username": { "type": "string" },
+        "fullName": { "type": "string" },
+        "role": { "type": "string" },
+        "createdAt": { "type": "string" }
+      },
+      "required": ["id", "username", "fullName", "role"]
+    },
+    "Customer": {
+      "title": "Customer",
+      "description": "ISP customers with packages and PPPoE details",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "fullName": { "type": "string" },
+        "nik": { "type": "string" },
+        "phone": { "type": "string" },
+        "address": { "type": "string" },
+        "packageId": { "type": "string" },
+        "joinDate": { "type": "string" },
+        "odpCode": { "type": "string" },
+        "status": { "type": "string", "enum": ["aktif", "isolir", "putus"] },
+        "prorateAmountFirstMonth": { "type": "number" },
+        "latitude": { "type": "number" },
+        "longitude": { "type": "number" },
+        "pppoeUsername": { "type": "string" },
+        "pppoePassword": { "type": "string" },
+        "createdAt": { "type": "string" }
+      },
+      "required": ["id", "fullName", "phone", "address", "packageId", "joinDate", "odpCode", "status", "prorateAmountFirstMonth"]
+    },
+    "Invoice": {
+      "title": "Invoice",
+      "description": "monthly bill for package or prorate",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "customerId": { "type": "string" },
+        "customerName": { "type": "string" },
+        "customerPhone": { "type": "string" },
+        "packageId": { "type": "string" },
+        "packageName": { "type": "string" },
+        "packagePrice": { "type": "number" },
+        "billingMonth": { "type": "string" },
+        "amount": { "type": "number" },
+        "dueDate": { "type": "string" },
+        "status": { "type": "string", "enum": ["lunas", "belum_bayar"] },
+        "paymentDate": { "type": "string" }
+      },
+      "required": ["id", "customerId", "customerName", "customerPhone", "packageId", "packageName", "packagePrice", "billingMonth", "amount", "dueDate", "status"]
+    },
+    "Transaction": {
+      "title": "Transaction",
+      "description": "cash ledger entry for income or expense",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "customerId": { "type": "string" },
+        "customerName": { "type": "string" },
+        "type": { "type": "string", "enum": ["pemasukan", "pengeluaran"] },
+        "amount": { "type": "number" },
+        "category": { "type": "string" },
+        "description": { "type": "string" },
+        "date": { "type": "string" },
+        "paymentMethod": { "type": "string", "enum": ["cash", "transfer"] }
+      },
+      "required": ["id", "type", "amount", "category", "description", "date", "paymentMethod"]
+    }
+  },
+  "firestore": {
+    "/users/{userId}": {
+      "schema": "AppUser",
+      "description": "Accounts table representing active operators and administrators"
+    },
+    "/customers/{customerId}": {
+      "schema": "Customer",
+      "description": "Internet subscribers directory and locations"
+    },
+    "/invoices/{invoiceId}": {
+      "schema": "Invoice",
+      "description": "Monthly and prorate accounts receivable"
+    },
+    "/transactions/{transactionId}": {
+      "schema": "Transaction",
+      "description": "Cash flow ledger tracking revenue and operational bills"
+    }
+  }
+}

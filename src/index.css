@@ -1,0 +1,398 @@
+@import "tailwindcss";
+
+/* ---------------------------------------------------- */
+/* LIGHT THEME VARIABLES & SYSTEM-WIDE OVERRIDES       */
+/* ---------------------------------------------------- */
+
+.theme-light {
+  color-scheme: light;
+  background-color: #f8fafc !important; /* slate-50 */
+  color: #0f172a !important; /* slate-900 */
+}
+
+/* Base Body background adapters */
+.theme-light,
+.theme-light .bg-slate-900,
+.theme-light .bg-slate-950,
+.theme-light .from-slate-955,
+.theme-light .to-slate-955,
+.theme-light .from-slate-950,
+.theme-light .to-slate-950,
+.theme-light .from-slate-900,
+.theme-light .to-slate-900 {
+  background-color: #f8fafc !important;
+  background-image: none !important;
+  color: #0f172a !important;
+}
+
+/* Admin top header and side section panels */
+.theme-light header.bg-slate-950 {
+  background-color: #ffffff !important;
+  border-bottom-color: #cbd5e1 !important;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.05) !important;
+}
+
+.theme-light header.bg-slate-950 h1 {
+  color: #0f172a !important;
+}
+
+.theme-light header.bg-slate-950 p {
+  color: #64748b !important;
+}
+
+.theme-light header.bg-slate-950 span.bg-teal-500\/15 {
+  background-color: rgba(139, 92, 246, 0.1) !important;
+  color: #7c3aed !important;
+  border: 1px solid rgba(139, 92, 246, 0.2) !important;
+}
+
+/* Sidebar navigation element */
+.theme-light aside {
+  background-color: transparent !important;
+}
+
+.theme-light aside .bg-slate-950 {
+  background-color: #ffffff !important;
+  border-color: #cbd5e1 !important;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.03) !important;
+}
+
+.theme-light aside .text-slate-450 {
+  color: #475569 !important;
+}
+
+/* Non-active sidebar button links */
+.theme-light aside button.text-slate-450,
+.theme-light aside button.text-slate-400 {
+  color: #475569 !important;
+}
+
+.theme-light aside button.text-slate-405:hover,
+.theme-light aside button.text-slate-400:hover,
+.theme-light aside button:not(.bg-teal-600):hover {
+  background-color: #f1f5f9 !important;
+  color: #0f172a !important;
+}
+
+/* Inactive Sidebar Button Text Fallbacks */
+.theme-light .text-slate-400 {
+  color: #475569 !important;
+}
+
+/* Base background cards & panel widgets */
+.theme-light .bg-slate-800,
+.theme-light .bg-slate-850,
+.theme-light .bg-slate-800\/60,
+.theme-light .bg-slate-850\/60,
+.theme-light .bg-slate-900\/40,
+.theme-light .bg-slate-900\/65,
+.theme-light .bg-slate-900\/60,
+.theme-light .bg-slate-950\/50,
+.theme-light .bg-slate-900\/50,
+.theme-light .bg-slate-850\/40,
+.theme-light .bg-slate-800\/100,
+.theme-light .bg-teal-500\/5,
+.theme-light .bg-emerald-500\/10,
+.theme-light .bg-teal-500\/10 {
+  background-color: #ffffff !important;
+  color: #0f172a !important;
+  border-color: #cbd5e1 !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03) !important;
+}
+
+/* Top welcome greeting premium gradient banner override */
+.theme-light .from-slate-800.to-slate-900,
+.theme-light .from-slate-800\/80.to-slate-900\/80 {
+  background: linear-gradient(135deg, #faf5ff, #f3e8ff) !important; /* Elegant light-purple canvas overlay */
+  border-color: #e9d5ff !important;
+  color: #0f172a !important;
+}
+
+.theme-light .from-slate-800.to-slate-900 h2,
+.theme-light .from-slate-800.to-slate-900 h3,
+.theme-light .from-slate-800.to-slate-900 p,
+.theme-light .from-slate-800.to-slate-900 span {
+  color: #0f172a !important;
+}
+
+.theme-light .from-slate-800.to-slate-900 .text-emerald-400 {
+  color: #7c3aed !important;
+}
+
+/* High contrast text elements safety mapping */
+.theme-light .text-white,
+.theme-light .text-slate-100,
+.theme-light .text-slate-200 {
+  color: #0f172a !important;
+}
+
+.theme-light .text-slate-300,
+.theme-light .text-slate-400 {
+  color: #334155 !important;
+}
+
+.theme-light .text-slate-450,
+.theme-light .text-slate-500 {
+  color: #64748b !important;
+}
+
+/* Standard border lines color mappings */
+.theme-light .border-slate-800,
+.theme-light .border-slate-705,
+.theme-light .border-slate-750,
+.theme-light .border-slate-700,
+.theme-light .border-slate-700\/10,
+.theme-light .border-slate-700\/30,
+.theme-light .border-slate-700\/35,
+.theme-light .border-slate-700\/40,
+.theme-light .border-slate-700\/50,
+.theme-light .border-slate-800\/60,
+.theme-light .border-slate-850,
+.theme-light .border-slate-950,
+.theme-light .border-slate-800\/80 {
+  border-color: #cbd5e1 !important;
+}
+
+/* Ensure teal lines or status borders are mapped to purple */
+.theme-light .border-teal-500\/20,
+.theme-light .border-teal-500\/40,
+.theme-light .border-emerald-500\/25,
+.theme-light .border-teal-500\/10 {
+  border-color: rgba(139, 92, 246, 0.3) !important;
+}
+
+/* Forms input fields, select filters, dropdown options */
+.theme-light input,
+.theme-light select,
+.theme-light textarea {
+  background-color: #ffffff !important;
+  color: #0f172a !important;
+  border-color: #cbd5e1 !important;
+  border-width: 1px !important;
+}
+
+.theme-light input::placeholder,
+.theme-light textarea::placeholder {
+  color: #94a3b8 !important;
+}
+
+.theme-light input:focus,
+.theme-light select:focus,
+.theme-light textarea:focus {
+  border-color: #7c3aed !important; /* purple highlight */
+}
+
+/* Table elements adaptations */
+.theme-light th {
+  background-color: #f1f5f9 !important;
+  color: #475569 !important;
+  font-weight: 700 !important;
+  border-bottom-width: 1px !important;
+  border-bottom-color: #cbd5e1 !important;
+}
+
+.theme-light td {
+  border-bottom-color: #cbd5e1 !important;
+  color: #334155 !important;
+}
+
+.theme-light tr:hover td {
+  background-color: #f8fafc !important;
+}
+
+/* Modal layers */
+.theme-light .fixed.bg-slate-950\/85 {
+  background-color: rgba(15, 23, 42, 0.45) !important;
+  backdrop-filter: blur(4px) !important;
+}
+
+.theme-light .fixed .bg-slate-800 {
+  background-color: #ffffff !important;
+  border-color: #cbd5e1 !important;
+  color: #0f172a !important;
+}
+
+.theme-light .fixed .bg-slate-800 h3,
+.theme-light .fixed .bg-slate-800 .text-white {
+  color: #0f172a !important;
+}
+
+.theme-light .fixed .bg-slate-900 {
+  background-color: #f8fafc !important;
+  border-color: #cbd5e1 !important;
+}
+
+/* Buttons style mappings */
+.theme-light .bg-slate-850 {
+  background-color: #f1f5f9 !important;
+  color: #334155 !important;
+  border-color: #cbd5e1 !important;
+}
+
+.theme-light .bg-slate-850:hover {
+  background-color: #e2e8f0 !important;
+  color: #0f172a !important;
+}
+
+/* ODP Maps & Nodes text styles */
+.theme-light svg text {
+  fill: #0f172a !important;
+}
+
+/* ---------------------------------------------------- */
+/* LIGHT MODE GREEN TO PURPLE CONVERSIONS               */
+/* ---------------------------------------------------- */
+
+.theme-light .bg-teal-600,
+.theme-light .bg-emerald-600,
+.theme-light .bg-teal-555,
+.theme-light .bg-emerald-555,
+.theme-light .bg-teal-550,
+.theme-light .bg-emerald-550 {
+  background-color: #7c3aed !important; /* violet-600 */
+  color: #ffffff !important;
+}
+
+.theme-light .bg-teal-600:hover,
+.theme-light .bg-emerald-600:hover,
+.theme-light .bg-teal-555:hover,
+.theme-light .bg-emerald-555:hover,
+.theme-light .bg-teal-550:hover,
+.theme-light .bg-emerald-550:hover,
+.theme-light .bg-teal-500:hover,
+.theme-light .bg-emerald-500:hover {
+  background-color: #6d28d9 !important; /* violet-700 */
+  color: #ffffff !important;
+}
+
+.theme-light .text-teal-400,
+.theme-light .text-emerald-400,
+.theme-light .text-green-400,
+.theme-light .text-emerald-300,
+.theme-light .text-teal-300,
+.theme-light .text-teal-355,
+.theme-light .text-teal-350,
+.theme-light .text-teal-500,
+.theme-light .text-emerald-500,
+.theme-light .text-teal-450 {
+  color: #7c3aed !important; /* violet-600 */
+}
+
+.theme-light .hover\:text-teal-400:hover,
+.theme-light .hover\:text-emerald-400:hover {
+  color: #6d28d9 !important;
+}
+
+.theme-light .text-teal-700,
+.theme-light .text-emerald-700 {
+  color: #6d28d9 !important; /* violet-700 */
+}
+
+.theme-light .bg-teal-500\/10,
+.theme-light .bg-emerald-500\/10,
+.theme-light .bg-teal-500\/5,
+.theme-light .bg-emerald-500\/5,
+.theme-light .bg-emerald-500\/15,
+.theme-light .bg-teal-500\/15,
+.theme-light .bg-teal-600\/10,
+.theme-light .bg-emerald-600\/10,
+.theme-light .bg-emerald-400\/10,
+.theme-light .bg-emerald-500\/25,
+.theme-light .bg-teal-600\/20,
+.theme-light .bg-emerald-600\/15 {
+  background-color: rgba(139, 92, 246, 0.12) !important; /* violet-500 alpha 0.12 */
+  color: #7c3aed !important;
+}
+
+.theme-light .border-teal-500\/20,
+.theme-light .border-teal-500\/40,
+.theme-light .border-teal-500\/10,
+.theme-light .border-emerald-500\/25,
+.theme-light .border-teal-500\/15,
+.theme-light .border-emerald-500\/20 {
+  border-color: rgba(139, 92, 246, 0.25) !important;
+}
+
+.theme-light .shadow-teal-700\/20,
+.theme-light .shadow-teal-500\/20 {
+  --tw-shadow-color: rgba(139, 92, 246, 0.2) !important;
+  box-shadow: 0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color) !important;
+}
+
+.theme-light .bg-teal-400,
+.theme-light .bg-emerald-400,
+.theme-light .bg-green-400,
+.theme-light .bg-teal-500,
+.theme-light .bg-emerald-500,
+.theme-light .bg-green-500 {
+  background-color: #8b5cf6 !important; /* violet-500 */
+}
+
+/* Gradient overrides */
+.theme-light .from-teal-500 {
+  --tw-gradient-from: #8b5cf6 !important;
+  --tw-gradient-stops: #8b5cf6, #a78bfa, #c084fc !important;
+}
+
+.theme-light .bg-gradient-to-r.from-teal-500 {
+  background-image: linear-gradient(to right, #8b5cf6, #a78bfa, #c084fc) !important;
+}
+
+/* Terminal adaptations for MicroTik component (Terminal always keeps high tech dark lookup) */
+.theme-light .bg-slate-950.font-mono {
+  background-color: #020617 !important;
+  color: #10b981 !important;
+}
+
+.theme-light .bg-slate-950.font-mono * {
+  color: #d1d5db !important;
+}
+
+.theme-light .bg-slate-950.font-mono span,
+.theme-light .bg-slate-950.font-mono p {
+  color: #d1d5db !important;
+}
+
+.theme-light .bg-slate-950.font-mono .text-green-400 {
+  color: #34d399 !important;
+}
+
+.theme-light .bg-slate-950.font-mono .text-amber-400 {
+  color: #f59e0b !important;
+}
+
+.theme-light .bg-slate-950.font-mono .text-rose-400 {
+  color: #ef4444 !important;
+}
+
+.theme-light .bg-slate-950.font-mono .text-slate-400 {
+  color: #94a3b8 !important;
+}
+
+/* Pulse effects */
+.theme-light .animate-pulse {
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: .5;
+  }
+}
+
+/* Custom rotate classes used */
+.animate-spin-slow {
+  animation: spin 8s linear infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

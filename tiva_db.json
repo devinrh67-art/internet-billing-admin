@@ -1,0 +1,87 @@
+{
+  "initialized": true,
+  "users": [
+    {
+      "id": "u_1",
+      "username": "admin",
+      "fullName": "Super Admin Tivana",
+      "role": "admin",
+      "createdAt": "2026-01-10T08:00:00Z"
+    },
+    {
+      "id": "u_2",
+      "username": "operator",
+      "fullName": "Andika Operator",
+      "role": "operator",
+      "createdAt": "2026-02-15T10:30:00Z"
+    }
+  ],
+  "customers": [
+    {
+      "fullName": "Tes",
+      "phone": "0857769024548",
+      "address": "Jalan",
+      "packageId": "p_10",
+      "status": "aktif",
+      "odpCode": "ODP-TVA-01",
+      "joinDate": "2026-05-27",
+      "prorateAmountFirstMonth": 25806,
+      "pppoeUsername": "000001",
+      "pppoePassword": "tda123",
+      "id": "c_1779885750732",
+      "createdAt": "2026-05-27T12:42:30.732Z"
+    }
+  ],
+  "invoices": [
+    {
+      "id": "inv_pro_1779885750732",
+      "customerId": "c_1779885750732",
+      "customerName": "Tes",
+      "customerPhone": "0857769024548",
+      "packageId": "p_10",
+      "packageName": "Paket Tiva 10 Mbps",
+      "packagePrice": 160000,
+      "billingMonth": "2026-05",
+      "amount": 25806,
+      "dueDate": "2026-05-27",
+      "status": "lunas",
+      "paymentDate": "2026-05-27"
+    }
+  ],
+  "transactions": [
+    {
+      "id": "tx_operasional_1",
+      "customerId": "",
+      "customerName": "",
+      "type": "pengeluaran",
+      "amount": 250000,
+      "category": "operasional",
+      "description": "Sewa bandwidth cadangan & Listrik Server",
+      "date": "2026-01-25",
+      "paymentMethod": "transfer"
+    },
+    {
+      "id": "tx_operasional_2",
+      "customerId": "",
+      "customerName": "",
+      "type": "pengeluaran",
+      "amount": 150000,
+      "category": "alat",
+      "description": "Pembelian Patch Cord & Drop Core FO 1 Roll",
+      "date": "2026-02-20",
+      "paymentMethod": "transfer"
+    },
+    {
+      "id": "tx_pro_1779885750732",
+      "customerId": "c_1779885750732",
+      "customerName": "Tes",
+      "type": "pemasukan",
+      "amount": 25806,
+      "category": "prorate",
+      "description": "Tagihan Prorata Awal (Join 27 Mei 2026) - Tes",
+      "date": "2026-05-27",
+      "paymentMethod": "cash"
+    }
+  ],
+  "version": 1
+}
